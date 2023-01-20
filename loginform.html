@@ -4,27 +4,50 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	body{
+		background-color:#f6f5f7;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		font-family:sans-serif;
+		height:100vh;
+		margin:auto;
+	}
+	</style>
 </head>
 <body>
-	<form>
-		<label for="name">Username</label>
-		<input type="text" id="name" value="">
-		
-		<label for="email">Useremail</label>
-		<input type="email" id="email" value="">
-		
-		<label for="password">Userpassword</label>
-		<input type="password" id="password" value="">
-		<button type="submit" id="but" onclick="myfunction()"></button>
+<div class="container">
+	<div class="form-container sign-up-container">
+	<form action="#">
+		<h1>Create Account</h1>
+		<div class="social-container">
+			<a href="" class="social"><iconify-icon icon="ic:baseline-facebook"></iconify-icon></a>
+			<a href="" class="social"><iconify-icon icon="dashicons:googleplus"></iconify-icon></a>
+			<a href="" class="social"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+		</div>
+		<span>or use your email for registration</span>
+		<input type="text" placeholder="Name">
+		<input type="email" placeholder="Email">
+		<input type="password" placeholder="Password">
+		<button>Sign up</button>
 	</form>
+	</div>
+</div>	
 	<script>
 		let details={
 			name:"priya",
 			email:"priyamuthuraman",
 			password:123
 		}
-		<!-- let btn=document.getElementById("but"); -->
-		<!-- but.addEventlistener("click",myfunction) -->
+		<!-- let btn=document.getElementById("but");-->
+		<!-- but.addEventlistener("click",myfunction)-->
 		function myfunction(event){
 			var name=document.getElementById("name");
 			var email=document.getElementById("email");
