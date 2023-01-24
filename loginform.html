@@ -4,61 +4,64 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 	<style>
-	*{
-		margin:0;
-		padding:0;
-		box-sizing:border-box;
-	}
-	body{
-		background-color:#f6f5f7;
-		display:flex;
-		justify-content:center;
-		align-items:center;
-		font-family:sans-serif;
-		height:100vh;
-		margin:auto;
-	}
+	
 	</style>
 </head>
 <body>
 <div class="container">
 	<div class="form-container sign-up-container">
-	<form action="#">
-		<h1>Create Account</h1>
-		<div class="social-container">
-			<a href="" class="social"><iconify-icon icon="ic:baseline-facebook"></iconify-icon></a>
-			<a href="" class="social"><iconify-icon icon="dashicons:googleplus"></iconify-icon></a>
-			<a href="" class="social"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+	<form class="form-control">
+		<h1>Facebook</h1>
+		<div class="box1">
+			<input type="text" value="" placeholder="Mobile number or email address" id="name">
+			<p id="para"> </p>
+			<!-- <iconify-icon icon="prime:times"></iconify-icon> -->
+			<!-- <iconify-icon icon="material-symbols:check-small"></iconify-icon> -->
 		</div>
-		<span>or use your email for registration</span>
-		<input type="text" placeholder="Name">
-		<input type="email" placeholder="Email">
-		<input type="password" placeholder="Password">
-		<button>Sign up</button>
+		<div class="box1">
+			<input type="password" value="" placeholder="Password" id="password">
+			<p id="para1"> </p>
+			<!-- <iconify-icon icon="prime:times"></iconify-icon> -->
+			<!-- <iconify-icon icon="material-symbols:check-small"></iconify-icon> -->
+		</div>
+		<div class="box1">
+		<button id="login">Log In</button>
+		</div><hr>
+		<div class="box2">
+			<button id="create">create new account</button>
+		</div>
 	</form>
 	</div>
 </div>	
 	<script>
-		let details={
-			name:"priya",
-			email:"priyamuthuraman",
-			password:123
-		}
-		<!-- let btn=document.getElementById("but");-->
-		<!-- but.addEventlistener("click",myfunction)-->
-		function myfunction(event){
-			var name=document.getElementById("name");
-			var email=document.getElementById("email");
-			var password=document.getElementById("password");
-			if(details.name==name.value&&details.email==email.value&&details.password==password.value){
-				alert("successful");
+		let btn=document.getElementById("login")
+		login.addEventListener("click",event)
+		function event(){
+			let input1=document.getElementById("name").value
+			let input2=document.getElementById("password").value
+			if(input1==""){
+				let error=document.getElementById("para");
+				error.innerHTML="please enter your email";
+				error.style.color="red";
 			}
-			else{
-				alert("invalid");
+			else if(input2==" "){
+				let error1=document.getElementById("para1");
+				error1.innerHTML="please enter your password";
+				error1.style.color="red";
 			}
-		}
+			else if((input1==" ")&&(input2==" ")){
+				window.location.href="file:///F:/fabevy/practice/loginform/loginsumbitpage.html"
+			}
+			}
+			let but=document.getElementById("create")
+			create.addEventListener("click",createaccount)
+			function createaccount(){
+				window.location.href="file:///F:/fabevy/practice/loginform/logincreateaccount.html"
+			}
+		
 	</script>
 </body>
 </html>
